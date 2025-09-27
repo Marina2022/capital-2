@@ -1,0 +1,58 @@
+.menuButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #090909;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1100;
+}
+
+.menuOverlay {
+  background: rgba(0, 0, 0, 0.5); /* полупрозрачный темный overlay */
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+}
+
+.menuContent {
+  background: white; /* белый фон */
+  color: #090909; /* текст черный */
+  position: fixed;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1001;
+  padding: 20px;
+}
+
+.closeButton {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #090909;
+}
+
+.menuNav {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font-size: 24px;
+  text-align: center;
+}
+
+.menuNav a {
+  color: #090909;
+  text-decoration: none;
+}
+
+/* скрываем кнопку гамбургера, когда меню открыто */
+[data-state='open'] > .menuButton {
+  display: none;
+}

@@ -1,7 +1,17 @@
+'use client'
+
 import s from './Header.module.scss';
 import Link from "next/link";
 
+import {useState} from "react";
+import MobileMenu from "@/components/layout/Header/MobileMenu/MobileMenu";
+
+
+
 const Header = () => {
+
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <header className={s.header}>
       <nav className={s.nav}>
@@ -24,6 +34,8 @@ const Header = () => {
           <Link href="/contacts">Pitch your startup</Link>
         </div>
       </nav>
+
+      <MobileMenu />
     </header>
   );
 };
