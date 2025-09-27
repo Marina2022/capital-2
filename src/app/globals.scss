@@ -1,0 +1,63 @@
+@use '@/assets/styles/mixins' as *;
+
+:root {
+  --text-color: #393939;
+  --title-color: #090909;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+body {
+  color: var(--text-color);
+  font-size: 18px;
+  line-height: 22px;
+}
+
+
+ul {
+  list-style: none;
+}
+
+li {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  width: 100%;
+  //max-width: 1640px;
+  max-width: 1440px;
+  margin: 0 auto;
+
+  @include xl {
+    max-width: 1298px;
+  }
+
+  @include lg {
+    max-width: 960px;
+  }
+
+  @include t {
+    padding: 0 20px;
+  }
+}
+
+
+button {
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+

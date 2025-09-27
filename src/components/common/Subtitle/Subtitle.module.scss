@@ -1,0 +1,28 @@
+@use '@/assets/styles/mixins' as *;
+
+.headerTag {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+
+  @include m {
+    width: 100%;
+  }
+}
+
+
+.circle {
+  border-radius: 50%;
+  height: 10px;
+  width: 10px;
+  background-color: var(--title-color);
+}
+
+.tagText {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+  letter-spacing: 0.06em;
+  text-align: left;
+  text-transform: uppercase;
+}

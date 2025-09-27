@@ -1,0 +1,146 @@
+@use '@/assets/styles/mixins' as *;
+
+.investments {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 132px;
+  height: 473px;
+
+  @include m {
+    height: auto;
+  }
+}
+
+.mainTitle {
+  color: var(--title-color);
+  font-size: 65px;
+  font-weight: 300;
+  line-height: 78px;
+  letter-spacing: 0;
+  margin-top: 65px;
+  max-width: 32%;
+  margin-bottom: 65px;
+
+  @include xl {
+    max-width: 38%;
+  }
+
+  @include lg {
+    font-size: 50px;
+  }
+
+  @include t {
+    max-width: 50%;
+  }
+
+  @include m {
+    max-width: 100%;
+    font-size: 36px;
+    margin-top: 44px;
+    margin-bottom: 50px;
+    font-weight: 300;
+    line-height: 50px;
+  }
+
+}
+
+.sliderWrapper {
+  position: absolute;
+  top: 0;
+  left: 41%;
+  width: 59%;
+
+  @include t {
+    width: 42%;
+    left: unset;
+    right: 20px;
+  }
+
+
+  @include m {
+    position: static;
+    width: calc(100vw - 40px);
+    top: 300px;
+    left: 0;
+  }
+}
+
+
+.slide {
+  border-radius: 20px;
+  padding: 40px;
+  border: 1px solid #e1e1e1;
+  margin-bottom: 22px;
+
+  @include t {
+    padding: 30px;
+  }
+}
+
+.innerBlock {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.sliderButtons {
+  display: flex;
+  gap: 18px;
+
+  @include m {
+    display: none;
+  }
+}
+
+.swiper {
+  height: 473px;
+
+  @include lg {
+    height: 420px;
+  }
+  @include m {
+    height: 360px;
+  }
+}
+
+.swiperWrapper {
+  overflow: visible;
+
+  @include m {
+    overflow: hidden;
+    width: calc(100vw - 40px);
+    margin-inline: 20px;
+  }
+}
+
+.cardTitle {
+  font-size: 30px;
+  font-weight: 300;
+  line-height: 36px;
+  letter-spacing: 0;
+  color: var(--title-color);
+  margin-bottom: 24px;
+}
+
+
+.icon {
+  width: 25px;
+  height: 25px;
+  margin-bottom: 65px;
+
+  @include lg {
+    margin-bottom: 45px;
+  }
+
+  @include m {
+    margin-bottom: 35px;
+  }
+}
+
+.cardText {
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 26px;
+  letter-spacing: 0;
+  pointer-events: none;
+}

@@ -1,0 +1,56 @@
+@use '@/assets/styles/mixins' as *;
+
+.metricsCard {
+  height: 320px;
+  border-radius: 20px;
+  border: #e1e1e1 1px solid;
+  padding: 40px 32px 32px 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  @include lg {
+    padding: 28px;
+  }
+
+  @include t {
+    padding: 16px;
+  }
+
+  @include t {
+    height: 220px;
+  }
+}
+
+.top {
+  display: flex;
+  align-items: flex-start;
+  color: var(--title-color);
+  font-size: 58px;
+  font-weight: 300;
+  line-height: 70px;
+  gap: 10px;
+
+  @include xl {
+    font-size: 48px;
+  }
+
+  @include lg {
+    font-size: 36px;
+  }
+}
+
+.entity {
+  color: #969696;
+}
+
+.bottomText {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 150%;
+}
+
+
+.number {
+  border-bottom: var(--title-color) 2px solid;
+}

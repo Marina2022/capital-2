@@ -1,0 +1,31 @@
+@use '@/assets/styles/mixins' as *;
+
+.approach {
+  margin-bottom: 174px;
+
+  @include m {
+    margin-bottom: 100px;
+  }
+}
+
+.sectionTitle {
+  margin-top: 65px;
+  font-size: 65px;
+  font-weight: 300;
+  line-height: 78px;
+  letter-spacing: 0;
+  color: var(--color-title);
+  margin-bottom: 48px;
+
+  @include m {
+    font-size: 36px;
+    line-height: 38px;
+    margin-top: 46px;
+  }
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}

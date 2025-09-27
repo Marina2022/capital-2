@@ -1,0 +1,109 @@
+@use '@/assets/styles/mixins' as *;
+
+
+.accordionItem {
+  padding: 44px;
+  border-radius: 20px;
+  border: #e1e1e1 1px solid;
+
+  @include m {
+    padding: 24px;
+  }
+}
+
+.header {
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 500;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  @include m {
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+}
+
+.icon {
+  transition: transform .26s ease;
+  margin-left: auto;
+}
+
+.isOpen .icon {
+  transform: rotate(90deg);
+}
+
+.content {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: all .26s ease;
+  overflow: hidden;
+  opacity: 0;
+
+  @include m {
+    order: 1;
+    width: 100%;
+  }
+}
+
+.isOpen .content {
+  grid-template-rows: 1fr;
+  opacity: 1;
+}
+
+.text {
+  overflow: hidden;
+  line-height: 1.4;
+  margin-left: auto;
+  padding-right: 20px;
+
+  @include m {
+    padding-right: 0px;
+  }
+}
+
+.numberWrapper {
+  width: 106px;
+  flex-shrink: 0;
+
+  @include m {
+    width: 60px;
+  }
+}
+
+.itemNumber {
+  font-size: 58px;
+  font-weight: 300;
+  line-height: 70px;
+  border-bottom: var(--title-color) 1px solid;
+  padding-bottom: 3px;
+
+  @include m {
+    font-size: 36px;
+  }
+}
+
+.itemTitle {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 22px;
+  width: 360px;
+  flex-shrink: 0;
+
+  @include lg {
+    width: 200px;
+  }
+
+  @include t {
+    width: 150px;
+  }
+}
+
+
+.titleWrapper {
+  display: flex;
+  align-items: center;
+
+
+}

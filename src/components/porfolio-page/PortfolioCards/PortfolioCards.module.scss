@@ -1,0 +1,89 @@
+@use '@/assets/styles/mixins' as *;
+
+.portfolio {
+  margin-bottom: -80px;
+
+  @include m {
+    margin-bottom: 20px;
+  }
+}
+
+.portfolioList {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(3, 1fr);
+  position: relative;
+  top: -240px;
+
+  @include lg {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include m {
+    top: -40px;
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+
+.innerBlock {
+  padding: 30px 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 100%;
+}
+
+.cardTitle {
+  font-size: 41px;
+  font-weight: 300;
+  line-height: 49px;
+  letter-spacing: 0;
+  color: white;
+}
+
+.cardCat {
+  color: white;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+  letter-spacing: 0.06em;
+  text-align: left;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+
+.slide {
+  border-radius: 20px;
+  overflow: hidden;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 554px;
+
+  @include m {
+    height: 440px;
+  }
+}
+
+
+.portfolioContainer {
+  width: 100%;
+  //max-width: 1640px;
+  //max-width: 1440px;
+  max-width: 1298px;
+  margin: 0 auto;
+
+  @include xl {
+    max-width: 1298px;
+  }
+
+  @include lg {
+    max-width: 960px;
+  }
+
+  @include t {
+    padding: 0 20px;
+  }
+}

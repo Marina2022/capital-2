@@ -1,0 +1,117 @@
+@use '@/assets/styles/mixins' as *;
+
+.companies {
+  padding-top: 62px;
+  padding-bottom: 174px;
+
+  @include m {
+    padding-bottom: 110px;
+  }
+}
+
+.title {
+  margin-top: 65px;
+
+  font-size: 65px;
+  font-weight: 300;
+  line-height: 78px;
+  letter-spacing: 0;
+  text-align: left;
+  color: var(--color-title);
+  max-width: 508px;
+
+  @include m {
+    max-width: 100%;
+
+    font-size: 35px;
+    font-weight: 300;
+    line-height: 38px;
+  }
+}
+
+.slide {
+  border-radius: 20px;
+  overflow: hidden;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.innerBlock {
+  padding: 30px 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 100%;
+}
+
+.headerBottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 72px;
+
+  @include m {
+    margin-bottom: 44px;
+  }
+}
+
+.sliderButtons {
+  display: flex;
+  gap: 18px;
+
+  @include m {
+    display: none;
+  }
+}
+
+.swiper {
+  height: 554px;
+
+  @include m {
+    height: 440px;
+  }
+}
+
+.swiperWrapper {
+  overflow: visible;
+
+  @include m {
+    overflow: hidden;
+    width: calc(100vw - 40px);
+    margin-inline: 20px;
+  }
+}
+
+.cat {
+  margin-top: auto;
+  margin-bottom: 8px;
+  color: white;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.cardTitle {
+  font-size: 41px;
+  font-weight: 300;
+  line-height: 49px;
+  letter-spacing: 0;
+  color: white;
+}
+
+.cardCat {
+  color: white;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+  letter-spacing: 0.06em;
+  text-align: left;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+
+

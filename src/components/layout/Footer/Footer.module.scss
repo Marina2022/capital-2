@@ -1,0 +1,24 @@
+@use '@/assets/styles/mixins' as *;
+
+.footer {
+  background-color: var(--title-color);
+  padding-block: 64px;
+  text-align: center;
+
+  @include m {
+    padding-block: 40px;
+  }
+
+}
+
+.footerBottom {
+  margin-top: 18px;
+  color: #f0f0f0;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 22px;
+
+  @include m {
+    font-size: 16px;
+  }
+}
