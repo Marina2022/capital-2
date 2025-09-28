@@ -36,7 +36,7 @@ const Companies = () => {
 
 
   return (
-    <section className={s.companies}>
+    <section className={s.companies  + ' ' + 'reveal'}>
       <div className="container" ref={containerRef}>
         <Subtitle title="Companies"/>
         <div className={s.headerBottom}>

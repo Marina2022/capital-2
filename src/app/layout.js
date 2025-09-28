@@ -6,6 +6,7 @@ import Header from "@/components/layout/Header/Header";
 import Footer from "@/components/layout/Footer/Footer";
 import BodyReady from "@/components/layout/BodyReady";
 
+
 const onest = Onest({
   subsets: ['latin'],
   weight: ['300', '400', '500', '600'],
@@ -21,10 +22,10 @@ export default function RootLayout({children}) {
   return (
     <html lang="en">
     <body className={onest.className}>
-    <BodyReady />
-      <Header/>
-      {children}
-      <Footer />
+    <BodyReady/>
+    <Header/>
+    {children}
+    <Footer/>
     </body>
     </html>
   );

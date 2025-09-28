@@ -26,21 +26,49 @@ const Contacts = () => {
 
   const phoneValue = watch('phone')
 
-  const onSubmit = (data) => {
-    console.log('Форма отправлена:', data);
-    setIsOpen(true)
-    setValue('phone', '')
+  // const onSubmit = (data) => {
 
-    reset({
-      name: '',
-      email: '',
-      phone: '',
-      company: '',
-      message: ''
-    });
+  const onSubmit = async (data) => {
+    try {
+      const formData = {
+        access_key: '1c8826f7-3cc2-4cfa-b9e3-f7b0658656a3',
+        name: data.name,
+        email: data.email,
+        phone: '+' + data.phone,
+        company: data.company,
+        message: data.message,
+        redirect: 'https://web3forms.com/success'
+      }
 
-    setKey(prevKey => prevKey + 1);
-  };
+      console.log('я живой')
+      const res = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json',
+        },
+        body: JSON.stringify(formData)
+      });
+
+      const json = await res.json();
+      if (json.success) {
+        setIsOpen(true)
+        reset({
+          name: '',
+          email: '',
+          phone: '',
+          company: '',
+          message: ''
+        });
+        setKey(prev => prev + 1);
+      } else {
+        console.error('Ошибка отправки:', json);
+      }
+    } catch (err) {
+      console.error('Ошибка:', err);
+    }
+  }
+
 
   return (
     <>
@@ -100,7 +128,13 @@ const Contacts = () => {
                     <div className={s.inputWrapper}>
 
                       {phoneValue && phoneValue.length > 0 && (
-                        <div style={{ position: 'absolute', left: '-10px', top: '50%', transform: 'translateY(-50%)', color: '#888' }}>+</div>
+                        <div style={{
+                          position: 'absolute',
+                          left: '-10px',
+                          top: '50%',
+                          transform: 'translateY(-50%)',
+                          color: '#888'
+                        }}>+</div>
                       )}
 
                       <Controller
@@ -128,7 +162,6 @@ const Contacts = () => {
 
                         )}
                       />
-
 
 
                       {errors.phone && (
@@ -193,7 +226,6 @@ const Contacts = () => {
           </form>
         </div>
       </section>
-
 
       <SuccessModal open={isOpen} onClose={() => setIsOpen(false)}>
         <p>🎉</p>

@@ -37,7 +37,7 @@ const Investments = () => {
 
 
   return (
-    <section className={s.investments}>
+    <section className={s.investments + ' ' + 'reveal'}>
       <div className="container" ref={containerRef}>
 
         <Subtitle title={'Investments'}/>

@@ -6,7 +6,7 @@ import Subtitle from "@/components/common/Subtitle/Subtitle";
 
 const About = () => {
   return (
-    <section className={s.about}>
+    <section className={s.about  + ' ' + 'reveal'}>
       <div className="container">
         <div className={s.headerBlock}>
 

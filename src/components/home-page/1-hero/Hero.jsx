@@ -32,6 +32,7 @@ const Hero = () => {
             <img src="/img/hero-companies/comp4.svg" alt=""/>
             <img src="/img/hero-companies/comp5.svg" alt=""/>
             <img src="/img/hero-companies/comp6.svg" alt=""/>
+
           </div>
         </div>
       </div>

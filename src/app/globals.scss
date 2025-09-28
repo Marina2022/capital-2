@@ -19,7 +19,7 @@ body {
 
 body {
   opacity: 0;
-  transition: opacity .38s ease;
+  transition: opacity .18s ease;
 }
 
 body.ready {
@@ -68,3 +68,13 @@ button {
 }
 
 
+.reveal {
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity .32s ease, transform .32s ease;
+}
+
+.reveal.is-in {
+  opacity: 1;
+  transform: none;
+}

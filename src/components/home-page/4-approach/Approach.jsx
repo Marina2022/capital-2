@@ -5,7 +5,7 @@ import {approachData} from "@/consts";
 
 const Approach = () => {
   return (
-    <section className={s.approach}>
+    <section className={s.approach + ' ' + 'reveal'}>
       <div className="container">
         <Subtitle title="Approach"/>
 

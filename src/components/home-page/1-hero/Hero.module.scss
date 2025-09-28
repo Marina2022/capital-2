@@ -84,25 +84,6 @@
   }
 }
 
-.bottomPart {
-  height: 90px;
-  margin-top: auto ;
-  width: 100%;
-  bottom: 0;
-  left: 0;
-  color: white;
-  background: black;
-  z-index: 2;
-  position: relative;
-
-  @include lg {
-   overflow-x: scroll;
-  }
-
-  @include lg {
-    height: 70px;
-  }
-}
 
 .bottomGradient {
   background: linear-gradient(to top, rgba(0, 0, 0, 0.55) 23%, rgba(0, 0, 0, 0) 100%);
@@ -129,6 +110,7 @@
   }
 
   @include t {
+
     padding: 0 20px;
   }
 }
@@ -141,14 +123,12 @@
 
   @include xl {
     max-width: 1298px;
+    max-width: 1310px;
   }
 
   @include lg {
     max-width: 100%;
-  }
-
-  @include t {
-    padding: 0 20px;
+    //padding: 0 20px;
   }
 }
 
@@ -187,6 +167,24 @@
 }
 
 
+.bottomPart {
+    height: 90px;
+    margin-top: auto ;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    color: white;
+    background: black;
+    z-index: 2;
+    position: relative;
+
+    @include lg {
+     overflow-x: scroll;
+      height: 70px;
+      padding-right: 20px;
+    }
+  }
+
 .companies {
   height: 90px;
   display: flex;
@@ -197,6 +195,7 @@
 
   @include lg {
     height: 60px;
+    padding-inline: 20px;
 
     img {
       transform: scale(0.8);
