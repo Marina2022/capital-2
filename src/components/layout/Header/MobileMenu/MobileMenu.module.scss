@@ -16,17 +16,22 @@
   z-index: 1000;
 }
 
+
 .menuContent {
-  background: white; /* белый фон */
-  color: #090909; /* текст черный */
+  background: white;
+  color: #090909;
   position: fixed;
-  inset: 0;
+  top: 0;             /* меню начинается с верхнего края */
+  left: 0;
+  width: 100%;        /* на всю ширину */
+  height: 90vh;       /* 90% высоты экрана */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   z-index: 1001;
   padding: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1); /* тень для объёма */
 }
 
 .closeButton {

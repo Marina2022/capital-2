@@ -11,13 +11,20 @@
   padding: 0;
 }
 
-
 body {
   color: var(--text-color);
   font-size: 18px;
   line-height: 22px;
 }
 
+body {
+  opacity: 0;
+  transition: opacity .38s ease;
+}
+
+body.ready {
+  opacity: 1;
+}
 
 ul {
   list-style: none;
