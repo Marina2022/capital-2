@@ -218,8 +218,8 @@ const Contacts = () => {
                 </div>
               </div>
               <div className={s.send}>
-                <button className={s.sendBtn}>
-                  Send message
+                <button className={s.sendBtn + " " + "hover-nudge"}>
+                  <span className={s.innerText}>Send message</span>
                 </button>
               </div>
             </div>

@@ -7,7 +7,6 @@ import {useState} from "react";
 import MobileMenu from "@/components/layout/Header/MobileMenu/MobileMenu";
 
 
-
 const Header = () => {
 
   const [isOpen, setIsOpen] = useState(false);
@@ -16,26 +15,26 @@ const Header = () => {
     <header className={s.header}>
       <nav className={s.nav}>
         <div className={s.logoContainer}>
-          <Link href="/">
+          <Link href="/"  >
             <img src="/img/logo_horizontal.svg" alt="logo" className={s.logoImg}/>
           </Link>
           <div className={s.logoText}>
-            <Link href="/">
+            <Link href="/" className={s.navLink}>
               <span className={s.strong}>Lionshare</span> Ventures
             </Link>
           </div>
         </div>
         <div className={s.centralContainer}>
-          <Link href="/">Home</Link>
-          <Link href="/portfolio">Portfolio</Link>
+          <Link href="/" className={s.navLink}>Home</Link>
+          <Link href="/portfolio" className={s.navLink}>Portfolio</Link>
 
         </div>
         <div className={s.rightContainer}>
-          <Link href="/contacts">Pitch your startup</Link>
+          <Link href="/contacts" className={s.navLink}>Pitch your startup</Link>
         </div>
       </nav>
 
-      <MobileMenu />
+      <MobileMenu/>
     </header>
   );
 };

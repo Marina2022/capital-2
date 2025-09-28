@@ -35,6 +35,7 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  height: 100%;
 }
 
 .innerBlock {
@@ -58,7 +59,7 @@
 
 .sliderButtons {
   display: flex;
-  gap: 18px;
+  //gap: 18px;
 
   @include m {
     display: none;
@@ -66,7 +67,7 @@
 }
 
 .swiper {
-  height: 554px;
+  height: 594px;
 
   @include m {
     height: 440px;
@@ -111,6 +112,10 @@
   text-align: left;
   text-transform: uppercase;
   margin-bottom: 8px;
+}
+
+.outerBlock {
+  padding: 20px 5px;
 }
 
 

@@ -36,13 +36,13 @@ const Companies = () => {
 
 
   return (
-    <section className={s.companies  + ' ' + 'reveal'}>
+    <section className={s.companies + ' ' + 'reveal'}>
       <div className="container" ref={containerRef}>
         <Subtitle title="Companies"/>
         <div className={s.headerBottom}>
           <h2 className={s.title}>The companies we believe&nbsp;in</h2>
           <div className={s.sliderButtons}>
-            <button
+            <button className="hover-nudge"
               onClick={() => swiperRef.current?.slidePrev()}
             >
               <svg width="34" height="28" viewBox="0 0 34 28" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -50,7 +50,7 @@ const Companies = () => {
                       strokeWidth="1.5" strokeLinecap="square"/>
               </svg>
             </button>
-            <button
+            <button className="hover-nudge"
               onClick={() => swiperRef.current?.slideNext()}
             >
               <svg width="34" height="28" viewBox="0 0 34 28" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -80,7 +80,7 @@ const Companies = () => {
             }
           }}
 
-          spaceBetween={10}
+          spaceBetween={0}
           centeredSlides={false}
           slidesOffsetBefore={offset}
           slidesOffsetAfter={offset}
@@ -92,16 +92,17 @@ const Companies = () => {
         >
           {
             portfolioCardsData.map((slide, i) => (
-              <SwiperSlide className={s.slide} style={{backgroundImage: `url(/img/portfolioItems/${slide.img})`}}>
-                <div className={s.innerBlock}>
+              <SwiperSlide className={s.outerBlock} key={i}>
+                <div className={s.slide + ' ' + 'hover-lift'}
+                     style={{backgroundImage: `url(/img/portfolioItems/${slide.img})`}}>
+                  <div className={s.innerBlock}>
+                    <div className={s.cardCat}>
+                      {slide.category}
+                    </div>
 
-
-                  <div className={s.cardCat}>
-                    {slide.category}
-                  </div>
-
-                  <div className={s.cardTitle}>
-                    {slide.title}
+                    <div className={s.cardTitle}>
+                      {slide.title}
+                    </div>
                   </div>
                 </div>
               </SwiperSlide>
@@ -109,7 +110,6 @@ const Companies = () => {
           }
         </Swiper>
       </div>
-
     </section>
   );
 };

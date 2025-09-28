@@ -144,8 +144,19 @@
 }
 
 .sendBtn {
-  color: var(--title-color);
+  padding-bottom: 14px;
   margin-left: 86px;
+  position: relative;
+  left: -10px;
+
+
+  @include m {
+    margin-left: 0px;
+  }
+}
+
+.innerText {
+  color: var(--title-color);
   padding-bottom: 6px;
   border-bottom: var(--title-color) 1px solid;
   text-transform: uppercase;
@@ -153,10 +164,6 @@
   font-weight: 400;
   line-height: 19px;
   letter-spacing: 0.06em;
-
-  @include m {
-    margin-left: 0px;
-  }
 }
 
 .followUs {

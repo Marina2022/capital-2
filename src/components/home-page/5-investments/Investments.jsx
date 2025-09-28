@@ -21,7 +21,7 @@ const Investments = () => {
       if (windowWidth > 990) {
         setOffset(containerRef.current.getBoundingClientRect().left);
       } else if (windowWidth > 668) {
-         setOffset(20);
+        setOffset(20);
       } else {
         setOffset(0);
       }
@@ -44,7 +44,7 @@ const Investments = () => {
         <h2 className={s.mainTitle}>Industries we invest&nbsp;in</h2>
 
         <div className={s.sliderButtons}>
-          <button
+          <button className="hover-nudge"
             onClick={() => swiperRef.current?.slidePrev()}
           >
             <svg width="34" height="28" viewBox="0 0 34 28" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -52,7 +52,7 @@ const Investments = () => {
                     strokeWidth="1.5" strokeLinecap="square"/>
             </svg>
           </button>
-          <button
+          <button className="hover-nudge"
             onClick={() => swiperRef.current?.slideNext()}
           >
             <svg width="34" height="28" viewBox="0 0 34 28" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -80,9 +80,8 @@ const Investments = () => {
               }
             }}
 
-            spaceBetween={38}
+            spaceBetween={0}
             centeredSlides={false}
-            // slidesOffsetBefore={offset}
             slidesOffsetAfter={offset}
             freeMode={true}
             direction="horizontal"
@@ -90,17 +89,17 @@ const Investments = () => {
 
             className={s.swiper}
           >
-
-
             {
               investmentSlider.map((slide, i) => (
-                <SwiperSlide className={s.slide}>
-                  <div className={s.innerBlock}>
-                    <img className={s.icon} src={slide.iconUrl} alt="icon"/>
-                    <div className={s.cardTitle}>
-                      {slide.title}
+                <SwiperSlide className={s.outerBlock} key={i}>
+                  <div className={s.slide + ' ' + 'hover-lift'}>
+                    <div className={s.innerBlock}>
+                      <img className={s.icon} src={slide.iconUrl} alt="icon"/>
+                      <div className={s.cardTitle}>
+                        {slide.title}
+                      </div>
+                      <p className={s.cardText}>{slide.text}</p>
                     </div>
-                    <p className={s.cardText}>{slide.text}</p>
                   </div>
                 </SwiperSlide>
               ))

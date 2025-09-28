@@ -9,15 +9,14 @@ const PortfolioCards = () => {
 
         <ul className={s.portfolioList}>
           {
-            portfolioCardsData.map((slide, i) => (
-              <li key={i} className={s.slide} style={{backgroundImage: `url(/img/portfolioItems/${slide.img})`}}>
+            portfolioCardsData.map((card, i) => (
+              <li key={i} className={s.slide + ' ' + 'hover-lift'} style={{backgroundImage: `url(/img/portfolioItems/${card.img})`}}>
                 <div className={s.innerBlock}>
                   <div className={s.cardCat}>
-                    {slide.category}
+                    {card.category}
                   </div>
-
                   <div className={s.cardTitle}>
-                    {slide.title}
+                    {card.title}
                   </div>
                 </div>
               </li>

@@ -7,7 +7,7 @@ export default function AccordionItem({item}) {
   const [open, setOpen] = useState(false);
 
   return (
-    <li className={`${s.accordionItem} ${open ? s.isOpen : ''}`}>
+    <li className={`${s.accordionItem  + ' ' + 'hover-lift'}  ${open ? s.isOpen : ''}`}>
       <div
         className={s.header}
         onClick={() => setOpen(!open)}
