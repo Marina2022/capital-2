@@ -14,16 +14,22 @@ const Header = () => {
   return (
     <header className={s.header}>
       <nav className={s.nav}>
-        <div className={s.logoContainer}>
-          <Link href="/"  >
-            <img src="/img/logo_horizontal.svg" alt="logo" className={s.logoImg}/>
-          </Link>
-          <div className={s.logoText}>
-            <Link href="/" className={s.navLink}>
-              <span className={s.strong}>Lionshare</span> Ventures
+        <div>
+          <div className={s.logoContainer}>
+            <Link href="/">
+              <img src="/img/logo_horizontal.svg" alt="logo" className={s.logoImg}/>
             </Link>
+            <div className={s.logoText}>
+              <div className={s.logoTextShine + ' ' + 'logo-mark-white'} >
+                <Link href="/" className={s.navLink}>
+                  <span className={s.strong}>Lionshare</span> Ventures
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
+
+
         <div className={s.centralContainer}>
           <Link href="/" className={s.navLink}>Home</Link>
           <Link href="/portfolio" className={s.navLink}>Portfolio</Link>

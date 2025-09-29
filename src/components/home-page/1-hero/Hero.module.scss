@@ -369,3 +369,13 @@
     img { transform: scale(0.8); }
   }
 }
+
+.placeholder {
+
+  display: none;
+  @include lg {
+    display: block;
+    color: transparent;
+  }
+
+}

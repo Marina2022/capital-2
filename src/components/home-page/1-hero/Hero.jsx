@@ -46,12 +46,13 @@ export default function Hero() {
       <div className={s.bottomPart}>
         <div className={s.companiesContainer}>
           <div className={s.companies}>
-            <img src="/img/hero-companies/comp1.svg" alt=""/>
-            <img src="/img/hero-companies/comp2.svg" alt=""/>
-            <img src="/img/hero-companies/comp3.svg" alt=""/>
-            <img src="/img/hero-companies/comp4.svg" alt=""/>
-            <img src="/img/hero-companies/comp5.svg" alt=""/>
-            <img src="/img/hero-companies/comp6.svg" alt=""/>
+            <img src="/img/hero-companies/comp1.svg" alt="company"/>
+            <img src="/img/hero-companies/comp2.svg" alt="company"/>
+            <img src="/img/hero-companies/comp3.svg" alt="company"/>
+            <img src="/img/hero-companies/comp4.svg" alt="company"/>
+            <img src="/img/hero-companies/comp5.svg" alt="company"/>
+            <img src="/img/hero-companies/comp6.svg" alt="company"/>
+            <div className={s.placeholder}>f</div>
           </div>
         </div>
       </div>
