@@ -25,67 +25,39 @@ export const metricCardsData = [
   },
 ]
 
+
 export const portfolioCardsData = [
   {
-    title: 'Bnkify',
-    category: 'Fintech',
+    category: 'AI Saas',
+    title: 'Fintech',
     img: 'portf1.webp'
   },
   {
-    title: 'Commerce X',
     category: 'ecommerce',
+    title: 'Alcools',
     img: 'portf2.webp'
   },
   {
-    title: 'Techflow X',
-    category: 'Tech',
+    category: 'FINTECH',
+    title: 'Votre',
     img: 'portf3.webp'
   },
   {
-    title: 'Fitness X',
-    category: 'Fitness',
+    category: 'FINTECH',
+    title: 'Uniswap',
     img: 'portf4.webp'
   },
   {
-    title: 'Maptech X',
-    category: 'Tech',
+    category: 'AI Saas',
+    title: 'Modal Labs ',
     img: 'portf5.webp'
   },
   {
-    title: 'Coworking X',
-    category: 'Coworking',
-    img: 'portf6.webp'
-  },
-  {
-    title: 'Bnkify',
-    category: 'Fintech',
-    img: 'portf1.webp'
-  },
-  {
-    title: 'Commerce X',
-    category: 'ecommerce',
-    img: 'portf2.webp'
-  },
-  {
-    title: 'Techflow X',
-    category: 'Tech',
-    img: 'portf3.webp'
-  },
-  {
-    title: 'Fitness X',
-    category: 'Fitness',
-    img: 'portf4.webp'
-  },
-  {
-    title: 'Maptech X',
-    category: 'Tech',
-    img: 'portf5.webp'
-  },
-  {
-    title: 'Coworking X',
-    category: 'Coworking',
+    category: 'AI HEALTH',
+    title: 'Kardi AI',
     img: 'portf6.webp'
   }
+
 ]
 
 export const approachData = [

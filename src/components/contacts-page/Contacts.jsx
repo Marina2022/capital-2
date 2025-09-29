@@ -31,7 +31,7 @@ const Contacts = () => {
   const onSubmit = async (data) => {
     try {
       const formData = {
-        access_key: '1c8826f7-3cc2-4cfa-b9e3-f7b0658656a3',
+        access_key: '0d802c01-f044-4f47-92e9-8e68994864fa',
         name: data.name,
         email: data.email,
         phone: '+' + data.phone,
@@ -78,12 +78,11 @@ const Contacts = () => {
             <div className={s.topWrapper}>
               <div className={s.getInTouch}>
                 <h1 className={s.mainTitle}>Get in touch</h1>
-                <p>Viverra euismod sed ultrices dictum urna nunc aliquam gravida phasellus vivamus commodo odio viverra
-                  nisl egestas donec sit mi.</p>
+                <p>Our team is always looking for exceptional founders with bold visions. Submit your information and we’ll be in touch if there’s a potential fit.</p>
                 <h2 className={s.subtitle}>Contact details</h2>
                 <div className={s.listItem}>
                   <div className={s.circle}></div>
-                  <span>losangeles@capital.com</span>
+                  <span>contact@lionshareventures.asia</span>
                 </div>
                 <div className={s.listItem}>
                   <div className={s.circle}></div>
@@ -93,7 +92,6 @@ const Contacts = () => {
               <div className={s.formContentWrapper}>
                 <div className={s.formContent}>
                   <div className={s.inputs}>
-
                     <div className={s.inputWrapper}>
                       <input
                         {...register('name', {required: 'Enter your name'})}
@@ -194,7 +192,7 @@ const Contacts = () => {
               <div className={s.social}>
                 <h2 className={s.followUs}>Follow us</h2>
                 <div className={s.icons}>
-                  <a href="#">
+                  <a className="hover-nudge-icon" href="https://x.com/lionshare_ventures">
                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <mask id="path-1-inside-1_12671_5132" fill="white">
                         <path
@@ -208,7 +206,7 @@ const Contacts = () => {
                         fill="black" mask="url(#path-1-inside-1_12671_5132)"/>
                     </svg>
                   </a>
-                  <a href="#">
+                  <a className="hover-nudge-icon" href="https://www.linkedin.com/company/lionshare-ventures">
                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path
                         d="M1 2.99134C1 2.41413 1.20271 1.93794 1.60811 1.56277C2.01351 1.18758 2.54055 1 3.18919 1C3.82626 1 4.34169 1.18469 4.73552 1.55411C5.14092 1.93506 5.34363 2.43145 5.34363 3.04329C5.34363 3.5974 5.14672 4.05915 4.7529 4.42857C4.3475 4.80952 3.81467 5 3.15444 5H3.13707C2.49999 5 1.98456 4.80952 1.59073 4.42857C1.19691 4.04762 1 3.56854 1 2.99134ZM1.22587 18.1429V6.57576H5.08301V18.1429H1.22587ZM7.22008 18.1429H11.0772V11.684C11.0772 11.2799 11.1236 10.9682 11.2162 10.7489C11.3784 10.3564 11.6245 10.0245 11.9546 9.75324C12.2847 9.48195 12.6988 9.34632 13.1969 9.34632C14.4942 9.34632 15.1429 10.2179 15.1429 11.961V18.1429H19V11.5108C19 9.8023 18.5946 8.50649 17.7838 7.62337C16.973 6.74026 15.9015 6.2987 14.5695 6.2987C13.0753 6.2987 11.9112 6.93939 11.0772 8.22078V8.25541H11.0598L11.0772 8.22078V6.57576H7.22008C7.24324 6.94516 7.25483 8.09378 7.25483 10.0216C7.25483 11.9495 7.24324 14.6565 7.22008 18.1429Z"

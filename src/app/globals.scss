@@ -96,7 +96,6 @@ button {
   }
 }
 
-
 .hover-nudge {
   @media (min-width: 960px) {
     transition: transform .18s ease, box-shadow .18s ease;
@@ -105,10 +104,23 @@ button {
   }
 }
 
+
 @media (min-width: 960px) {
   .hover-nudge:hover {
     transform: translateY(-2px) scale(1.02) !important;
     box-shadow: 0 8px 16px rgba(0, 0, 0, .12) !important;
+  }
+}
+
+.hover-nudge-icon {
+  @media (min-width: 960px) {
+    transition: transform .18s ease;
+  }
+}
+
+@media (min-width: 960px) {
+  .hover-nudge-icon:hover {
+    transform: translateY(-2px) scale(1.02) !important;
   }
 }
 

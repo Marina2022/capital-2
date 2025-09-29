@@ -72,7 +72,7 @@ const Investments = () => {
               668: {
                 slidesPerView: 1,
               },
-              990: {
+              1360: {
                 slidesPerView: 2,
               },
               1746: {

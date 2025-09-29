@@ -59,10 +59,14 @@
 
 .sliderButtons {
   display: flex;
-  //gap: 18px;
+
+  @include t {
+    gap: 18px;
+  }
 
   @include m {
-    display: none;
+    position: relative;
+    top: 40px;
   }
 }
 
