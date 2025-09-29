@@ -7,9 +7,7 @@ import {Controller, useForm} from 'react-hook-form';
 import {useState} from "react";
 import SuccessModal from "@/components/contacts-page/SuccessModal/SuccessModal";
 
-
 const Contacts = () => {
-
   const [isOpen, setIsOpen] = useState(false)
   const [key, setKey] = useState(0);
   const [focused, setFocused] = useState(false)
@@ -18,7 +16,6 @@ const Contacts = () => {
     register,
     handleSubmit,
     formState: {errors},
-    setValue,
     reset,
     control,
     watch
@@ -26,7 +23,6 @@ const Contacts = () => {
 
   const phoneValue = watch('phone')
 
-  // const onSubmit = (data) => {
 
   const onSubmit = async (data) => {
     try {
@@ -40,7 +36,6 @@ const Contacts = () => {
         redirect: 'https://web3forms.com/success'
       }
 
-      console.log('я живой')
       const res = await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
         headers: {
@@ -68,7 +63,6 @@ const Contacts = () => {
       console.error('Ошибка:', err);
     }
   }
-
 
   return (
     <>
@@ -102,7 +96,6 @@ const Contacts = () => {
                         <p className={s.error}>{errors.name.message}</p>
                       )}
                     </div>
-
                     <div className={s.inputWrapper}>
                       <input
                         {...register('email', {
@@ -120,11 +113,8 @@ const Contacts = () => {
                       )}
                     </div>
                   </div>
-
                   <div className={s.inputs}>
-
                     <div className={s.inputWrapper}>
-
                       {phoneValue && phoneValue.length > 0 && (
                         <div style={{
                           position: 'absolute',
@@ -134,13 +124,11 @@ const Contacts = () => {
                           color: '#888'
                         }}>+</div>
                       )}
-
                       <Controller
                         name="phone"
                         control={control}
                         rules={{required: 'Enter your phone number'}}
                         render={({field}) => (
-
                           <Cleave
                             key={key}
                             {...field}
@@ -151,7 +139,6 @@ const Contacts = () => {
                               delimiters: [' ', ' ', ' '],
                               numericOnly: true,
                               // prefix: '+'
-
                             }}
                             onChange={(e) => field.onChange(e.target.value)}
                             onFocus={() => setFocused(true)}
@@ -160,14 +147,10 @@ const Contacts = () => {
 
                         )}
                       />
-
-
                       {errors.phone && (
                         <p className={s.error}>{errors.phone.message}</p>
                       )}
                     </div>
-
-
                     <div className={s.inputWrapper}>
                       <input
                         {...register('company', {})}
@@ -176,7 +159,6 @@ const Contacts = () => {
                       />
                     </div>
                   </div>
-
                   <textarea
                     {...register('message', {required: 'Enter your message'})}
                     placeholder="Type your message here..."
@@ -224,7 +206,6 @@ const Contacts = () => {
           </form>
         </div>
       </section>
-
       <SuccessModal open={isOpen} onClose={() => setIsOpen(false)}>
         <p>🎉</p>
         <p>Your message has been successfully sent!</p>

@@ -7,5 +7,5 @@ export default function BodyReady() {
     document.body.classList.add('ready');
   }, []);
 
-  return null; // ничего не рендерит, только эффект
+  return null;
 }

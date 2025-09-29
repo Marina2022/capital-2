@@ -8,14 +8,11 @@ const Approach = () => {
     <section className={s.approach + ' ' + 'reveal'}>
       <div className="container">
         <Subtitle title="Approach"/>
-
         <h2 className={s.sectionTitle}>Our approach</h2>
-
         <ul className={s.list}>
           {
             approachData.map((item, index) => <AccordionItem key={index} item={item}/>)
           }
-
         </ul>
       </div>
     </section>

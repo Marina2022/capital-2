@@ -1,6 +1,5 @@
 import s from './Subtitle.module.scss';
 
-
 const Subtitle = ({title}) => {
   return (
     <div className={s.headerTag}>

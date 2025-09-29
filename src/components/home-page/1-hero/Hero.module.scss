@@ -29,7 +29,6 @@
 
   @include m {
     background-position: calc(50% + 70px) center;
-
   }
 }
 
@@ -78,7 +77,6 @@
 }
 
 .mainContent {
-  //border: 1px solid red;
   position: relative;
   z-index: 1;
   padding-top: 95px;
@@ -110,7 +108,6 @@
   }
 
   @include xs {
-
     max-width: 100%;
   }
 }
@@ -129,7 +126,6 @@
   }
 
   @include m {
-
     margin-top: 140px;
   }
 }
@@ -154,7 +150,6 @@
     margin-top: 0px;
     justify-content: flex-start;
     left: 0;
-
   }
 
   @include m {
@@ -224,5 +219,4 @@
     display: block;
     color: transparent;
   }
-
 }

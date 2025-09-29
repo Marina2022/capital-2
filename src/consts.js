@@ -57,7 +57,6 @@ export const portfolioCardsData = [
     title: 'Kardi AI',
     img: 'portf6.webp'
   }
-
 ]
 
 export const approachData = [
@@ -69,7 +68,6 @@ export const approachData = [
   {
     number: '02',
     title: "Transformation",
-    // text: "We embed our team directly into portfolio companies to build growth infrastructure, sharpen go-to-market, and prepare for their next round of institutional investment.",
     text: "We embed our team directly into portfolio companies to build growth infrastructure, sharpen go-to-market, and prepare for their next round of institutional investment. We embed our team directly into portfolio companies to build growth infrastructure, sharpen go-to-market, and prepare for their next round of institutional investment.",
   },
   {
@@ -78,7 +76,6 @@ export const approachData = [
     text: "We commit capital selectively and scale winners, positioning them for competitive follow-on rounds and category leadership."
   }
 ]
-
 
 
 export const investmentSlider = [

@@ -4,9 +4,8 @@ import s from './investments.module.scss';
 import Subtitle from "@/components/common/Subtitle/Subtitle";
 import {investmentSlider} from "@/consts";
 import {Swiper, SwiperSlide} from "swiper/react";
-import 'swiper/css';
 import {useEffect, useRef, useState} from "react";
-
+import 'swiper/css';
 
 const Investments = () => {
 
@@ -29,8 +28,7 @@ const Investments = () => {
   }
 
   useEffect(() => {
-    updateOffset(); // сразу при монтировании
-
+    updateOffset();
     window.addEventListener('resize', updateOffset); // на ресайз
     return () => window.removeEventListener('resize', updateOffset);
   }, []);
@@ -39,13 +37,11 @@ const Investments = () => {
   return (
     <section className={s.investments + ' ' + 'reveal'}>
       <div className="container" ref={containerRef}>
-
         <Subtitle title={'Investments'}/>
         <h2 className={s.mainTitle}>Industries we invest&nbsp;in</h2>
-
         <div className={s.sliderButtons}>
           <button className="hover-nudge"
-            onClick={() => swiperRef.current?.slidePrev()}
+                  onClick={() => swiperRef.current?.slidePrev()}
           >
             <svg width="34" height="28" viewBox="0 0 34 28" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M14.5895 1.63672L1.77656 13.8673L14.5895 26.0978M2.94138 13.8673H33.2266" stroke="#090909"
@@ -53,7 +49,7 @@ const Investments = () => {
             </svg>
           </button>
           <button className="hover-nudge"
-            onClick={() => swiperRef.current?.slideNext()}
+                  onClick={() => swiperRef.current?.slideNext()}
           >
             <svg width="34" height="28" viewBox="0 0 34 28" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M19.4105 1.63672L32.2234 13.8673L19.4105 26.0978M31.0586 13.8673H0.773438" stroke="#090909"
@@ -61,10 +57,8 @@ const Investments = () => {
             </svg>
           </button>
         </div>
-
         <div className={s.sliderWrapper}>
           <Swiper
-
             breakpoints={{
               0: {
                 slidesPerView: 1,
@@ -79,14 +73,12 @@ const Investments = () => {
                 slidesPerView: 2,
               }
             }}
-
             spaceBetween={0}
             centeredSlides={false}
             slidesOffsetAfter={offset}
             freeMode={true}
             direction="horizontal"
             onSwiper={(swiper) => (swiperRef.current = swiper)}
-
             className={s.swiper}
           >
             {
@@ -106,10 +98,7 @@ const Investments = () => {
             }
           </Swiper>
         </div>
-
-
       </div>
-
     </section>
   );
 };

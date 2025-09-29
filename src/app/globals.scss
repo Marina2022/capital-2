@@ -42,7 +42,6 @@ a {
 
 .container {
   width: 100%;
-  //max-width: 1640px;
   max-width: 1440px;
   margin: 0 auto;
 
@@ -59,14 +58,12 @@ a {
   }
 }
 
-
 button {
   background: none;
   border: none;
   outline: none;
   cursor: pointer;
 }
-
 
 .reveal {
   opacity: 0;
@@ -78,7 +75,6 @@ button {
   opacity: 1;
   transform: none;
 }
-
 
 .hover-lift {
   @media (min-width: 960px) {
@@ -124,11 +120,6 @@ button {
   }
 }
 
-
-html {
-  scroll-behavior: smooth;
-}
-
 .logo-mark {
   position: relative;
   overflow: hidden;
@@ -149,7 +140,6 @@ html {
   position: relative;
   overflow: hidden;
   display: inline-block;
-
 }
 
 .logo-mark-white::after {

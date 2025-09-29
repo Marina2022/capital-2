@@ -1,5 +1,5 @@
 
-'use client'; // если Next.js 13+ (app router)
+'use client';
 
 import {useEffect, useRef} from 'react';
 import s from './Hero.module.scss';
@@ -22,27 +22,22 @@ export default function Hero() {
   return (
     <section className={s.hero}>
       <div ref={heroImgRef} className={s.heroImg}></div>
-
       <div className={s.heroGradient}></div>
       <div className={s.bottomGradient}></div>
-
       <div className={s.heroContainer}>
         <div className={s.mainContent}>
           <h1 className={s.mainTitle}>Empowering the next generation of startups</h1>
-
           <p className={s.text}>
             Lionshare Ventures is Southeast Asia’s premier selective venture builder.
             We back only the top 5% of founders with capital and embedded operational
             support, driving 3x faster growth through hands-on execution.
           </p>
-
           <div className={s.links}>
             <Link href="/contacts">Pitch your startup</Link>
             <Link href="/portfolio">Portfolio</Link>
           </div>
         </div>
       </div>
-
       <div className={s.bottomPart}>
         <div className={s.companiesContainer}>
           <div className={s.companies}>

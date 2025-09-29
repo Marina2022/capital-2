@@ -41,7 +41,6 @@
     font-weight: 300;
     line-height: 50px;
   }
-
 }
 
 .sliderWrapper {
@@ -50,13 +49,11 @@
   left: 41%;
   width: 59%;
 
-
   @include t {
     width: 42%;
     left: unset;
     right: 20px;
   }
-
 
   @include m {
     position: static;
@@ -66,14 +63,12 @@
   }
 }
 
-
 .slide {
   border-radius: 20px;
   padding: 40px;
   border: 1px solid #e1e1e1;
   margin-bottom: 22px;
   height: 100%;
-
 
   @include t {
     padding: 30px;
@@ -100,7 +95,7 @@
 
 .swiper {
   height: 513px;
-  overflow-y: visible!important;
+  overflow-y: visible !important;
 
   @include lg {
     height: 420px;
@@ -128,7 +123,6 @@
   color: var(--title-color);
   margin-bottom: 24px;
 }
-
 
 .icon {
   width: 25px;

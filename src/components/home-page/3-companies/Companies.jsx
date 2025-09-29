@@ -3,12 +3,11 @@
 import s from './Companies.module.scss';
 import Subtitle from "@/components/common/Subtitle/Subtitle";
 import {Swiper, SwiperSlide} from "swiper/react";
-import 'swiper/css';
 import {useEffect, useRef, useState} from "react";
 import {portfolioCardsData} from "@/consts";
+import 'swiper/css';
 
 const Companies = () => {
-
   const containerRef = useRef(null);
   const [offset, setOffset] = useState(0);
   const swiperRef = useRef(null);
@@ -28,12 +27,10 @@ const Companies = () => {
   }
 
   useEffect(() => {
-    updateOffset(); // сразу при монтировании
-
+    updateOffset();
     window.addEventListener('resize', updateOffset); // на ресайз
     return () => window.removeEventListener('resize', updateOffset);
   }, []);
-
 
   return (
     <section className={s.companies + ' ' + 'reveal'}>
@@ -64,7 +61,6 @@ const Companies = () => {
 
       <div className={s.swiperWrapper}>
         <Swiper
-
           breakpoints={{
             0: {
               slidesPerView: 1,
@@ -79,7 +75,6 @@ const Companies = () => {
               slidesPerView: 3.9,
             }
           }}
-
           spaceBetween={0}
           centeredSlides={false}
           slidesOffsetBefore={offset}
@@ -87,7 +82,6 @@ const Companies = () => {
           freeMode={true}
           direction="horizontal"
           onSwiper={(swiper) => (swiperRef.current = swiper)}
-
           className={s.swiper}
         >
           {
@@ -99,7 +93,6 @@ const Companies = () => {
                     <div className={s.cardCat}>
                       {slide.category}
                     </div>
-
                     <div className={s.cardTitle}>
                       {slide.title}
                     </div>

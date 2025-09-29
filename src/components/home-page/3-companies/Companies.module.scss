@@ -11,7 +11,6 @@
 
 .title {
   margin-top: 65px;
-
   font-size: 65px;
   font-weight: 300;
   line-height: 78px;
@@ -22,7 +21,6 @@
 
   @include m {
     max-width: 100%;
-
     font-size: 36px;
     font-weight: 300;
     line-height: 38px;

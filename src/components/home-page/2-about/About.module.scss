@@ -24,7 +24,6 @@
   }
 }
 
-
 .headerText {
   flex: 1;
   font-size: 65px;
@@ -43,7 +42,6 @@
     line-height: 120%;
   }
 }
-
 
 .tagTextUnderlined {
   font-size: 16px;
@@ -86,9 +84,7 @@
   @include m {
     grid-template-columns: 1fr;
   }
-
 }
-
 
 .becomeNext {
   grid-column: span 2;
@@ -133,7 +129,6 @@
   padding-bottom: 3px;
   color: white;
 }
-
 
 .headerTagBlock {
   width: 25%;
