@@ -30,16 +30,16 @@ export default function Hero() {
         <div className={s.mainContent}>
           <h1 className={s.mainTitle}>Empowering the next generation of startups</h1>
 
-          <div className={s.links}>
-            <Link href="/contacts">Pitch your startup</Link>
-            <Link href="/portfolio">Portfolio</Link>
-          </div>
-
           <p className={s.text}>
             Lionshare Ventures is Southeast Asia’s premier selective venture builder.
             We back only the top 5% of founders with capital and embedded operational
             support, driving 3x faster growth through hands-on execution.
           </p>
+
+          <div className={s.links}>
+            <Link href="/contacts">Pitch your startup</Link>
+            <Link href="/portfolio">Portfolio</Link>
+          </div>
         </div>
       </div>
 

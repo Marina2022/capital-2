@@ -1,55 +1,54 @@
-
+@use '@/assets/styles/mixins' as *;
 
 .menuButton {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  z-index: 1100;
-  background: none;
-  border: none;
-  color: #090909;
-  cursor: pointer;
+
+  display: none;
+
+  @include t {
+    display: block;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1100;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #090909;
+  }
+
 }
 
-/* полупрозрачный фон */
+
 .menuOverlay {
+  background: rgba(0, 0, 0, 0.5);
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.5);
   z-index: 1000;
-
-  &[data-state='open'] {
-    animation: overlayShow 0.3s ease forwards;
-  }
-  &[data-state='closed'] {
-    animation: overlayHide 0.3s ease forwards;
-  }
 }
 
-/* само меню */
 .menuContent {
+  background: white;
+  color: #090909;
   position: fixed;
-  top: 0;
+  top: -100%;
   left: 0;
   width: 100%;
-  height: 90vh;
-  background: #fff;
-  color: #090909;
+  height: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 20px;
   z-index: 1001;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 
-  /* анимация выезда */
-  &[data-state='open'] {
-    animation: slideDown 0.4s ease forwards;
-  }
-  &[data-state='closed'] {
-    animation: slideUp 0.4s ease forwards;
-  }
+  padding-top: 60px ;
+  padding-bottom: 30px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  animation: slideDown 0.35s ease forwards;
+}
+
+@keyframes slideDown {
+  from { top: -100%; }
+  to { top: 0; }
 }
 
 .closeButton {
@@ -58,43 +57,119 @@
   right: 20px;
   background: none;
   border: none;
-  color: #090909;
   cursor: pointer;
+  color: #090909;
 }
 
 .menuNav {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+
   font-size: 24px;
-  text-align: center;
+  //text-align: center;
+
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  height: 100%;
+
+  font-weight: 400;
+  line-height: 125%;
+  width: 80%;
 }
 
-.menuNav a {
+.menuLink {
   color: #090909;
   text-decoration: none;
-}
 
-@keyframes overlayShow {
-  from { opacity: 0; }
-  to   { opacity: 1; }
-}
-@keyframes overlayHide {
-  from { opacity: 1; }
-  to   { opacity: 0; }
-}
+  border-bottom: 1px solid #e0e0e0 ;
+  padding-block: 22px;
 
-@keyframes slideDown {
-  from { transform: translateY(-100%); }
-  to   { transform: translateY(0); }
-}
-@keyframes slideUp {
-  from { transform: translateY(0); }
-  to   { transform: translateY(-100%); }
+  &:last-child {
+    border-bottom: none;
+  }
 }
 
 
+//***************
 
-[data-state="open"] > .menuButton {
-  display: none;
+
+.logoContainer {
+  position: relative;
+  width: 265px;
+  padding-inline: 30px;
+  height: 60px;
+}
+
+.logoText {
+  position: absolute;
+  right: 60px;
+  top: 0;
+  height: 100%;
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  background: #fff;
+  z-index: 1;
+  letter-spacing: -0.04em;
+}
+
+.logoImg {
+  position: absolute;
+  right: 26px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.strong {
+  font-weight: 600;
+}
+
+.centralContainer {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 28px;
+  padding-inline: 30px;
+  border-left: 1px solid #000;
+  border-right: 1px solid #000;
+  align-items: center;
+}
+
+.rightContainer {
+  width: 40%;
+  padding-inline: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+
+.navLink {
+  position: relative;
+  text-decoration: none;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 0;
+    height: 1px;
+    background: currentColor;
+    transition: width .2s ease;
+  }
+
+  &:hover::after {
+    width: 100%;
+  }
+}
+
+.logoTextShine {
+  position: relative;
+  height: 100%;
+  width: 130%;
+  left: 30%;
+  display: flex;
+  align-items: center;
 }

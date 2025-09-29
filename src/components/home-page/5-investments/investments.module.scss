@@ -2,12 +2,12 @@
 
 .investments {
   position: relative;
-  //overflow: hidden;
   margin-bottom: 132px;
   height: 473px;
 
   @include m {
     height: auto;
+    margin-bottom: 100px;
   }
 }
 

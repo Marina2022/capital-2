@@ -80,35 +80,42 @@ button {
 }
 
 
-
 .hover-lift {
-  transition: transform .24s cubic-bezier(.2,.8,.2,1), box-shadow .24s cubic-bezier(.2,.8,.2,1);
-  will-change: transform;
-  position: relative;
-  z-index: 100;
+  @media (min-width: 960px) {
+    transition: transform .24s cubic-bezier(.2, .8, .2, 1), box-shadow .24s cubic-bezier(.2, .8, .2, 1);
+    will-change: transform;
+    position: relative;
+    z-index: 100;
+  }
 }
 
 .hover-lift:hover {
-  transform: translateY(-6px) !important;
-  box-shadow: 0 12px 24px rgba(0,0,0,.12);
+  @media (min-width: 960px) {
+    transform: translateY(-6px) !important;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, .12);
+  }
 }
 
 
 .hover-nudge {
-  transition: transform .18s ease, box-shadow .18s ease;
-  padding: 10px;
-  border-radius: 10px;
+  @media (min-width: 960px) {
+    transition: transform .18s ease, box-shadow .18s ease;
+    padding: 10px;
+    border-radius: 10px;
+  }
 }
 
 @media (min-width: 960px) {
   .hover-nudge:hover {
     transform: translateY(-2px) scale(1.02) !important;
-    box-shadow: 0 8px 16px rgba(0,0,0,.12) !important;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, .12) !important;
   }
 }
 
 
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+}
 
 .logo-mark {
   position: relative;
@@ -117,9 +124,10 @@ html { scroll-behavior: smooth; }
 }
 
 .logo-mark::after {
-  content:"";
-  position: absolute; inset:0;
-  background: linear-gradient(120deg,transparent 40%,rgba(255,255,255,.05) 50%,transparent 60%);
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, transparent 40%, rgba(255, 255, 255, .05) 50%, transparent 60%);
   transform: translateX(-120%);
   animation: shine 8s linear infinite;
 }
@@ -133,15 +141,22 @@ html { scroll-behavior: smooth; }
 }
 
 .logo-mark-white::after {
-  content:"";
-  position: absolute; inset:0;
-  background: linear-gradient(120deg,transparent 40%,rgba(220, 230, 255, 0.25)  50%,transparent 60%);
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, transparent 40%, rgba(220, 230, 255, 0.25) 50%, transparent 60%);
   transform: translateX(-120%);
   animation: shine 8s linear infinite;
 }
 
 @keyframes shine {
-  0%{transform:translateX(-120%)}
-  12%{transform:translateX(120%)}
-  100%{transform:translateX(120%)}
+  0% {
+    transform: translateX(-120%)
+  }
+  12% {
+    transform: translateX(120%)
+  }
+  100% {
+    transform: translateX(120%)
+  }
 }

@@ -14,7 +14,7 @@ const Header = () => {
   return (
     <header className={s.header}>
       <nav className={s.nav}>
-        <div>
+
           <div className={s.logoContainer}>
             <Link href="/">
               <img src="/img/logo_horizontal.svg" alt="logo" className={s.logoImg}/>
@@ -27,7 +27,7 @@ const Header = () => {
               </div>
             </div>
           </div>
-        </div>
+
 
 
         <div className={s.centralContainer}>
